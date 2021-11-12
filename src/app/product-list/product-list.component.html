@@ -1,10 +1,11 @@
 <ul>
   <li *ngFor="let product of products">
-    {{product.albumName}}
+>
+<a [routerLink]="['/product{{product.productId]}}"
+  [routerActive]="[active]"
+ >
+  {{product.albumName}}
+</a> 
   </li>
 </ul>
-<!-- <div class="col-sm-5">
-  <span class="products-number">{{products.id}}</span>
-  <span class="products-artistname">{{products.artistName}}</span>
-  <span class="products-albumtname"></span>
-</div> -->
+{{product.productName}}
